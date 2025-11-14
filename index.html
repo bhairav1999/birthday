@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="mr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Happy Birthday Yash</title>
+    <!-- Favicon -->
+<link rel="icon" href="./yash.png" type="image/x-icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --accent: #7c3aed;
+        --muted: #94a3b8;
+        --glass: rgba(255, 255, 255, 0.03);
+        --container: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Montserrat, system-ui, Segoe UI, Roboto, "Helvetica Neue",
+          Arial;
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          #071429 0%,
+          #071126 50%,
+          #071429 100%
+        );
+        color: #e6eef8;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0px auto 40px;
+        padding: 0px;
+      }
+      header {
+        position: sticky;
+  top: 0px;
+  z-index: 999;
+  background: #071126;
+  padding: 30px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .logo {
+        width: 78px;
+        height: 78px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--accent), #2563eb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        color: white;
+        font-size: 28px;
+        box-shadow: 0 8px 30px rgba(12, 17, 35, 0.6);
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0;
+      }
+      p.lead {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 28px;
+      }
+
+      /* left card */
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 22px;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+          position: sticky;
+ 
+      }
+      .avatar {
+        width: 160px;
+        height: 160px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, #111827, #0b1220);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #fff;
+        font-size: 48px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .stats {
+        display: flex;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .stat {
+        flex: 1;
+        background: var(--glass);
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .stat b {
+        display: block;
+        font-size: 18px;
+      }
+
+      /* main */
+      .maincard {
+        padding: 28px;
+        border-radius: 14px;
+        min-height: 400px;
+      }
+      .ribbon {
+        display: inline-block;
+        padding: 6px 12px;
+        background: linear-gradient(90deg, var(--accent), #06b6d4);
+        border-radius: 999px;
+        font-weight: 700;
+        color: white;
+        font-size: 13px;
+      }
+      .headline {
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+      .content {
+        line-height: 1.82;
+        color: #e6eef8;
+        font-size: 15.5px;
+      }
+
+      footer {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 18px;
+      }
+      button {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 10px 14px;
+        border-radius: 10px;
+        color: #e6eef8;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button.primary {
+        background: linear-gradient(90deg, var(--accent), #06b6d4);
+        border: 0;
+      }
+
+
+      .stiky{
+           /* width: 250px; */
+    height: auto;
+    position: sticky;
+    top: 160px;
+ 
+
+      }
+
+      /* responsive */
+      @media (max-width: 980px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .avatar {
+          width: 120px;
+          height: 120px;
+        }
+        .wrap {
+          padding: 18px;
+        }
+      }
+
+      /* decorative */
+      .bg-deco {
+        position: fixed;
+        right: -120px;
+        top: -120px;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(
+            circle at 30% 30%,
+            rgba(124, 58, 237, 0.12),
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 70% 70%,
+            rgba(6, 182, 212, 0.08),
+            transparent 30%
+          );
+        filter: blur(34px);
+        pointer-events: none;
+      }
+
+      .print-note {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .controls {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-deco"></div>
+    <div class="wrap">
+    <header>
+  <div class="brand">
+    <div class="logo">MD</div>
+    <div class="header-text">
+      <h1>Happy Birthday Yash</h1>
+      <p class="lead">
+        Pure, emotional, and meaningful — crafted with love and respect for Yash.
+      </p>
+    </div>
+  </div>
+</header>
+
+
+      <div class="grid">
+        <aside class="card">
+         <div class="stiky">
+             <div class="profile">
+            <div class="avatar" id="avatar">
+              <img src="./yash.png" alt="" height="100%" />
+            </div>
+            <div style="font-weight: 700; font-size: 18px">To: Yash / Owner</div>
+            <div class="meta">From: Team</div>
+            <div class="stats" style="width: 100%">
+              <div class="stat">
+             <b>Experience</b><span class="meta"> 10+ Years</span>
+
+              </div>
+              <div class="stat">
+                <b>Team</b><span class="meta">20+ Members</span>
+              </div>
+            </div>
+          </div>
+
+          <hr
+            style="
+              border: none;
+              border-top: 1px solid rgba(255, 255, 255, 0.03);
+              margin: 18px 0;
+            "
+          />
+          <div style="font-weight: 700; margin-bottom: 8px">Quick actions</div>
+          <div class="controls">
+            <button id="btnPrint">Print</button>
+            <button id="btnPdf" class="primary">Download PDF</button>
+          </div>
+         
+         </div>
+        </aside>
+
+        <main class="card maincard" id="printable">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 16px;
+              flex-wrap: wrap;
+            "
+          >
+<div>
+  <span class="ribbon">Birthday Greetings</span>
+  <h2 class="headline">जीवनाला दिशा देणाऱ्या व्यक्तीला मनापासून शुभेच्छा</h2>
+  <div class="meta">
+    Honest, emotional, uplifting — a message that truly comes from the heart.
+  </div>
+</div>
+
+          </div>
+
+          <article>
+
+
+<p><strong>Yash,</strong><br>
+    <br>
+आजचा दिवस तुमच्यासाठी जितका खास आहे, तितकाच तो आम्हा सर्वांसाठीही अर्थपूर्ण आहे. हा फक्त एक Birthday नाही—हा तो दिवस आहे ज्या दिवशी एक Vision, एक दिशा, आणि एक धडाडी जन्माला आली.</p>
+
+
+<h3>The Start… The Clarity… The Vision </h3>
+<p>एखादी संस्था उभी करणे म्हणजे फक्त business सुरू करणे नाही—ती म्हणजे स्वप्नांना shape देणे, शक्यतांवर विश्वास ठेवणे, आणि माणसांच्या क्षमतेवर गुंतवणूक करणे.</p>
+
+
+<p>आज कंपनी जिथे उभी आहे, ते तुमच्या determination, planning, आणि विचारांच्या खोलीमुळे. </p>
+
+
+<h3>Leadership That Speaks Without Noise </h3>
+<p>Leadership म्हणजे फक्त आदेश देणे नाही… Leadership म्हणजे स्वतःच्या कृतीने दिशा दाखवणे. तुम्ही कधी आवाज करून नाही—नेहमी शांतपणे आणि clarity ने मार्ग दाखवला.</p>
+
+
+<p>✔ नियम — पण कधी कठोरपणा नाही<br>
+✔ प्रगती — पण कधी घाई नाही<br>
+✔ अपेक्षा — पण कधी दबाव नाही<br>
+✔ शिस्त — पण कधी भीती नाही</p>
+
+
+<h3>Your Presence Creates Stability </h3>
+<p>तुमची उपस्थिती म्हणजे team साठी एक assurance—"काहीही झालं तरी Yash आहेत, त्यामुळे दिशा मिळेल." तुमचा positive approach आणि तुमची vision आमच्यात confidence निर्माण करते.</p>
+
+
+<h3>A Guide Who Builds People </h3>
+<p>तुमचं मार्गदर्शन म्हणजे instructions नाहीत—त्या अनुभवातून आलेल्या priceless शिकवणी आहेत. Professionalism, discipline, patience, negotiation—प्रत्येक example आमच्यासाठी एक नवं lesson असतं.</p>
+
+
+<h3>The Impact We Feel Everyday </h3>
+<p>तुम्ही तयार केलेला foundation इतका strong आहे की त्यावर उभं राहणारं प्रत्येक project आणि प्रत्येक व्यक्ती मजबूत जाणवतं. Market मधला respect हे तुमच्या values, ethics आणि consistency मुळेच आहे.</p>
+
+
+<h3>What We Truly Appreciate </h3>
+<p>तुमची simplicity, तुमचा calm nature, आणि अहंकारापासून दूर असलेली तुमची व्यक्तिमत्त्वाची ताकद—हीच तुमची खरी ओळख आहे. Success असूनही तुम्ही grounded राहता—हे rare आहे.</p>
+
+
+<h3>Your Passion Sets the Tone </h3>
+<p>तुमचं dedication team साठी एक standard सेट करतं—कसं काम करायचं, कसं शिकायचं, आणि कसं वाढायचं.</p>
+
+
+<h3>On Your Special Day… </h3>
+<p>Yash, तुम्हाला मनापासून वाढदिवसाच्या हार्दिक शुभेच्छा. May your journey ahead be filled with good health, peace, progress, prosperity and happiness. ✨</p>
+
+
+<h3 class="end-note">Final Thoughts </h3>
+<p>एक गोष्ट मनापासून सांगतो—तुम्ही आम्हाला दिलेली साथ ही फक्त professional नाही… ती emotional strength देखील आहे. सुखातही, दुःखातही, challenges मध्येही तुम्ही नेहमी आमच्या पाठीशी उभे राहिलात.</p>
+
+
+<p>माझ्या आई-वडिलांनी मला चालायला, शिकायला, आणि योग्य मूल्य दिली… आणि ती values कामात implement करण्याची संधी तुम्ही दिलीत. माझ्यावर ठेवलेला तुमचा विश्वास—हा माझ्यासाठी खूप मोठा मान आहे. 🙏</p>
+
+
+<p>मी तुम्हाला मुद्दाम थोडं उशिरा wish करत आहे कारण company च्या timing आणि discipline मला खूप महत्वाचे आहेत. आज मी office मध्ये नाही—work from home आहे—म्हणून हा छोटा surprise webpage तयार करून online wish करत आहे. तयार करायला वेळ लागला म्हणून wish late झाला. Late आहे—but 100% मनापासून आहे. ❤️</p>
+
+
+<p>आणि माझ्या आई-बाबांकडूनही तुम्हाला मनःपूर्वक वाढदिवसाच्या खूप खूप शुभेच्छा आणि विपुल यश मिळो हीच प्रार्थना. </p>
+
+
+<p><strong>Once Again, Happy Birthday Yash! 🎂</strong><br>
+You truly deserve the best. </p>
+<p style="font-weight:400; font-size:14px; margin-top:20px; text-align: end; ">
+  – Bhairav Karande
+</p>
+
+</article>
+
+          <!-- <footer>
+            <button id="btnCopy">Copy text</button>
+            <button id="btnShare">Share (copy link)</button>
+          </footer> -->
+        </main>
+      </div>
+    </div>
+
+    <script>
+      // Print
+      document.getElementById("btnPrint").addEventListener("click", () => {
+        window.print();
+      });
+
+      // Copy text
+      document.getElementById("btnCopy").addEventListener("click", async () => {
+        try {
+          const msg = document.getElementById("message").innerText;
+          await navigator.clipboard.writeText(msg);
+          alert("Message copied to clipboard");
+        } catch (e) {
+          alert("Could not copy: " + e.message);
+        }
+      });
+
+      // Download PDF using html2pdf (CDN loaded dynamically)
+      document.getElementById("btnPdf").addEventListener("click", async () => {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js";
+        document.body.appendChild(script);
+        script.onload = () => {
+          const opt = {
+            margin: 0.6,
+            filename: "Owner_Birthday_Tribute.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+          };
+          const element = document.getElementById("printable");
+          html2pdf().set(opt).from(element).save();
+        };
+      });
+
+      // Share - copy page URL (works if hosted)
+      document.getElementById("btnShare").addEventListener("click", () => {
+        try {
+          navigator.clipboard.writeText(location.href);
+          alert("Page link copied");
+        } catch (e) {
+          alert("Could not copy link");
+        }
+      });
+
+      // small initials capture if user wants avatar
+      const avatar = document.getElementById("avatar");
+      // initials already placed; optionally you can set initials via prompt
+    </script>
+  </body>
+</html>
